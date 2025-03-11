@@ -1,0 +1,624 @@
+
+/* 共通設定
+============================== */
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.site-title {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+}
+
+.main-sub-title {
+    font-size: 1.3rem;
+    display: inline-block;
+    border-bottom: 2px solid #1fa2ff;
+    padding-bottom: 2px;
+    margin-bottom: 30px;
+}
+
+.content-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.section-contents {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+
+/* header設定
+============================= */
+
+.header {
+    width: 100%;
+    padding: 20px 15px;
+    background-color: rgba(126, 180, 255, 0.9);
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+nav {
+    margin: 0 0 0 auto;
+}
+
+.pc ul {
+    display: flex;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.pc ul li a {
+    font-size: 1.1rem;
+    color: #555;
+    display: block;
+    padding: 0 20px;
+}
+
+.sm {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    #hamburger {
+        background-color: transparent;
+        position: relative;
+        cursor: pointer;
+        margin: 0 0 0 auto;
+        width: 60px;
+        height: 30px;
+        padding-left: 20px;
+    }
+
+    .icon span {
+        position: absolute;
+        left: 15px;
+        width: 30px;
+        height: 2px;
+        background-color: #555;
+        transition: ease 0.75s;
+        margin-right: 3px;
+    }
+
+    .icon span:nth-of-type(1) {
+        top: 8px;
+    }
+
+    .icon span:nth-of-type(2) {
+        top: 20px;
+    }
+
+    .icon span:nth-of-type(3) {
+        bottom: 8px;
+    }
+
+    .close span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 28px;
+    }
+
+    .close span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .close span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+    }
+
+    .sm {
+        top: 60px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background-color: rgba(126, 180, 255, 0.9);
+    }
+
+    .sm ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .sm ul li {
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .sm ul li a {
+        text-align: center;
+        color: #555;
+        border-bottom: solid 0.5px #777;
+    }
+}
+
+
+
+
+
+/* 左下固定 ↑まで戻るボタン設定
+============================== */
+
+.rev-top-btn {
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    margin-left: 15px;
+    z-index: 3;
+}
+
+.rev-top-btn a {
+    font-size: 1.3rem;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+
+
+/* メインコンテンツ設定
+============================== */
+
+.container {
+    animation-name: main-all-fadeIn;
+    animation-duration: 0.9s;
+}
+
+.main-contents {
+    max-width: 960px;
+    margin: 100px auto 60px auto;
+}
+
+@keyframes main-all-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* スクロールすれば表示設定
+============================= */
+
+.fadeInMove-r {
+    margin-right: -10px;
+    margin-top: -15px;
+    opacity: 0;
+    transition: all 0.9s;
+}
+
+.fadeInMove-r.active {
+    margin-right: 0;
+    margin-top: 0;
+    opacity: 1;
+}
+
+.fadeInMove-l {
+    margin-left: -10px;
+    margin-top: -15px;
+    opacity: 0;
+    transition: all 0.9s;
+}
+
+.fadeInMove-l.active {
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 1;
+}
+
+
+/* メインビジュアル
+============================= */
+
+#main-v {
+    width: 100%;
+}
+
+#main-v img {
+    border-radius: 25px;
+}
+
+
+/* 京都TECHについて
+============================= */
+
+.game-studio8-img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.game-studio8-img img {
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+.game-studio8-img .img-desc {
+    font-size: 0.8rem;
+    text-align: left;
+    color: #bdbdbd;
+}
+
+@media screen and (max-width: 768px) {
+    #main-v {
+        width: 90%;
+        margin: 0 auto 60px auto;
+    }
+
+    .game-studio8-img {
+        width: 90%;
+        margin: 40px auto 60px auto;
+    }
+
+    #about p {
+        padding: 20px;
+    }
+
+}
+
+
+/* 特徴・専攻紹介共通部分
+============================= */
+
+.flex-all-contents {
+    margin-bottom: 60px;
+}
+
+.flex-all-contents ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.flex-all-contents ul li {
+    width: 46%;
+    margin: 0 auto;
+}
+
+.flex-all-contents ul li:last-child {
+    margin: 0 auto 0 0;
+    margin-left: 15px;
+}
+
+.flex-all-contents ul li .content-inner {
+    border: 2px solid #1fa2ff;
+    border-radius: 25px;
+    margin: 0 15px 30px 15px;
+    padding: 5px;
+}
+
+.flex-all-contents ul li .content-inner .content-title {
+    display: inline-block;
+    color: #FFF;
+    background-color: #1fa2ff;
+    border-radius: 7px;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+.flex-all-contents ul li .content-inner .content-img {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.flex-all-contents ul li .content-inner .content-img img {
+    border-radius: 25px;
+}
+
+.flex-all-contents ul li .content-inner .detail-btn {
+    text-align: right;
+    margin: 30px 0;
+    margin-right: 5px;
+}
+
+.flex-all-contents ul li .content-inner .detail-btn a {
+    color: #FFF;
+    background-color: #1fa2ff;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex-all-contents ul {
+        flex-direction: column;
+    }
+
+    .flex-all-contents ul li {
+        width: 100%;
+    }
+
+    .flex-all-contents ul li:last-child {
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+
+/* 専攻一覧カラーチェンジ1
+=============================== */
+
+#senkou ul li:nth-child(1) .content-inner {
+    border: 2px solid #ff1b91;
+    border-radius: 25px;
+    margin: 0 15px 30px 15px;
+    padding: 5px;
+}
+
+#senkou ul li:nth-child(1) .content-inner .content-title {
+    display: inline-block;
+    color: #FFF;
+    background-color: #ff1b91;
+    border-radius: 7px;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(1) .content-inner .detail-btn a {
+    color: #FFF;
+    background-color: #ff1b91;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(1) .content-inner .content-inner-table th {
+    background-color: #ffcde7;
+}
+
+
+/* 専攻一覧カラーチェンジ2
+=============================== */
+
+#senkou ul li:nth-child(2) .content-inner {
+    border: 2px solid #22ac00;
+    border-radius: 25px;
+    margin: 0 15px 30px 15px;
+    padding: 5px;
+}
+
+#senkou ul li:nth-child(2) .content-inner .content-title {
+    display: inline-block;
+    color: #FFF;
+    background-color: #22ac00;
+    border-radius: 7px;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(2) .content-inner .detail-btn a {
+    color: #FFF;
+    background-color: #22ac00;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(2) .content-inner .content-inner-table th {
+    background-color: #96d386;
+}
+
+
+/* 専攻一覧カラーチェンジ4 (3番目は初期設定のまま)
+=============================== */
+
+#senkou ul li:nth-child(4) .content-inner {
+    border: 2px solid #ff921d;
+    border-radius: 25px;
+    margin: 0 15px 30px 15px;
+    padding: 5px;
+}
+
+#senkou ul li:nth-child(4) .content-inner .content-title {
+    display: inline-block;
+    color: #FFF;
+    background-color: #ff921d;
+    border-radius: 7px;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(4) .content-inner .detail-btn a {
+    color: #FFF;
+    background-color: #ff921d;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(4) .content-inner .content-inner-table th {
+    background-color: #ffca91;
+}
+
+
+/* 専攻一覧カラーチェンジ5
+=============================== */
+
+#senkou ul li:nth-child(5) .content-inner {
+    border: 2px solid #b938ff;
+    border-radius: 25px;
+    margin: 0 15px 30px 15px;
+    padding: 5px;
+}
+
+#senkou ul li:nth-child(5) .content-inner .content-title {
+    display: inline-block;
+    color: #FFF;
+    background-color: #b938ff;
+    border-radius: 7px;
+    margin-top: -40px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(5) .content-inner .detail-btn a {
+    color: #FFF;
+    background-color: #b938ff;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#senkou ul li:nth-child(5) .content-inner .content-inner-table th {
+    background-color: #d697f8;
+}
+
+
+
+
+
+
+
+/* 専攻一覧、テーブルの設定
+=============================== */
+
+.content-inner-table {
+    border: 1px solid #888;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.content-inner-table th,
+.content-inner-table td {
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+
+.content-inner-table th:last-child,
+.content-inner-table td:last-child {
+    border-right: none;
+}
+
+.content-inner-table th {
+    background-color: #8dd0ff;
+}
+
+.content-inner-table td {
+    background-color: #FFF;
+}
+
+.content-inner-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+.footer {
+    width: 100%;
+    color: #FFF;
+    padding: 15px;
+    background-color: #555;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.footer h2 {
+    width: 50%;
+    text-align: center;
+}
+
+.footer ul {
+    width: 50%;
+    text-align: center;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul a {
+    color: #FFF;
+}
+
+.footer p {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-inner {
+        width: 90%;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+    }
+    
+    .footer h2 {
+        width: 45%;
+    }
+    
+    .footer ul {
+        width: 45%;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
