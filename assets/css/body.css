@@ -177,23 +177,32 @@ nav {
 
 
 
-/* 左下固定 ↑まで戻るボタン設定
-============================== */
+/* ページ上部へ戻るボタン、左下固定
+=================================== */
 
-.rev-top-btn {
+.pagetop {
+    height: 50px;
+    width: 50px;
     position: fixed;
-    bottom: 5%;
-    left: 0;
-    margin-left: 15px;
-    z-index: 3;
+    left: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border: solid 3px #d7ad2d;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
 }
 
-.rev-top-btn a {
-    font-size: 1.3rem;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 7px;
-    padding: 10px;
+.pagetop__arrow {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    transform: translateY(20%) rotate(-45deg);
 }
 
 
@@ -225,28 +234,32 @@ nav {
 ============================= */
 
 .fadeInMove-r {
-    margin-right: -10px;
-    margin-top: -15px;
+    position: relative;
+    right: -20px;
+    top: -15px;
     opacity: 0;
     transition: all 0.9s;
 }
 
 .fadeInMove-r.active {
-    margin-right: 0;
-    margin-top: 0;
+    position: relative;
+    right: 0;
+    top: 0;
     opacity: 1;
 }
 
 .fadeInMove-l {
-    margin-left: -10px;
-    margin-top: -15px;
+    position: relative;
+    left: -20px;
+    bottom: -15px;
     opacity: 0;
     transition: all 0.9s;
 }
 
 .fadeInMove-l.active {
-    margin-left: 0;
-    margin-top: 0;
+    position: relative;
+    left: 0;
+    bottom: 0;
     opacity: 1;
 }
 
@@ -329,17 +342,19 @@ nav {
 .flex-all-contents ul li .content-inner {
     border: 2px solid #1fa2ff;
     border-radius: 25px;
-    margin: 0 15px 30px 15px;
+    margin: 30px 15px 30px 15px;
     padding: 5px;
 }
 
 .flex-all-contents ul li .content-inner .content-title {
+    position: relative;
+    top: -30px;
     display: inline-block;
     color: #FFF;
     background-color: #1fa2ff;
     border-radius: 7px;
-    margin-top: 20px;
     padding: 10px;
+    white-space: nowrap;
 }
 
 .flex-all-contents ul li .content-inner .content-img {
@@ -390,24 +405,14 @@ nav {
 
 #senkou ul li:nth-child(1) .content-inner {
     border: 2px solid #ff1b91;
-    border-radius: 25px;
-    margin: 0 15px 30px 15px;
-    padding: 5px;
 }
 
 #senkou ul li:nth-child(1) .content-inner .content-title {
-    display: inline-block;
-    color: #FFF;
     background-color: #ff1b91;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(1) .content-inner .detail-btn a {
-    color: #FFF;
     background-color: #ff1b91;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(1) .content-inner .content-inner-table th {
@@ -420,24 +425,14 @@ nav {
 
 #senkou ul li:nth-child(2) .content-inner {
     border: 2px solid #22ac00;
-    border-radius: 25px;
-    margin: 0 15px 30px 15px;
-    padding: 5px;
 }
 
 #senkou ul li:nth-child(2) .content-inner .content-title {
-    display: inline-block;
-    color: #FFF;
     background-color: #22ac00;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(2) .content-inner .detail-btn a {
-    color: #FFF;
     background-color: #22ac00;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(2) .content-inner .content-inner-table th {
@@ -450,24 +445,14 @@ nav {
 
 #senkou ul li:nth-child(4) .content-inner {
     border: 2px solid #ff921d;
-    border-radius: 25px;
-    margin: 0 15px 30px 15px;
-    padding: 5px;
 }
 
 #senkou ul li:nth-child(4) .content-inner .content-title {
-    display: inline-block;
-    color: #FFF;
     background-color: #ff921d;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(4) .content-inner .detail-btn a {
-    color: #FFF;
     background-color: #ff921d;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(4) .content-inner .content-inner-table th {
@@ -480,24 +465,14 @@ nav {
 
 #senkou ul li:nth-child(5) .content-inner {
     border: 2px solid #b938ff;
-    border-radius: 25px;
-    margin: 0 15px 30px 15px;
-    padding: 5px;
 }
 
 #senkou ul li:nth-child(5) .content-inner .content-title {
-    display: inline-block;
-    color: #FFF;
     background-color: #b938ff;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(5) .content-inner .detail-btn a {
-    color: #FFF;
     background-color: #b938ff;
-    border-radius: 7px;
-    padding: 10px;
 }
 
 #senkou ul li:nth-child(5) .content-inner .content-inner-table th {
@@ -588,6 +563,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+
     .footer-inner {
         width: 90%;
         max-width: 100%;
@@ -596,13 +572,21 @@ nav {
         align-items: center;
         margin: 20px auto;
     }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
     
     .footer h2 {
-        width: 45%;
+        width: 50%;
     }
     
     .footer ul {
-        width: 45%;
+        width: 40%;
+    }
+
+    .footer ul a {
+        font-size: 1rem;
     }
     
     
