@@ -55,3 +55,22 @@ jQuery(window).scroll(function() {
     scrollBurnRight();
     scrollBurnLeft();
 });
+
+
+// ページ上部へ戻るボタン実装
+
+jQuery(function () {
+    const $pageTop = jQuery("#js-pagetop");
+
+    jQuery(window).scroll(function () {
+        if (jQuery(window).scrollTop() > 1) {
+            $pageTop.fadeIn(300).css("display", "flex");
+        } else {
+            $pageTop.fadeOut(300);
+        }
+    });
+
+    $pageTop.click(function () {
+        jQuery("html, body").animate({ scrollTop: 0 }, 300);
+    });
+});
