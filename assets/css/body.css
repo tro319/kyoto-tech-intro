@@ -338,7 +338,7 @@ nav {
     color: #FFF;
     background-color: #1fa2ff;
     border-radius: 7px;
-    margin-top: -40px;
+    margin-top: 20px;
     padding: 10px;
 }
 
@@ -400,7 +400,6 @@ nav {
     color: #FFF;
     background-color: #ff1b91;
     border-radius: 7px;
-    margin-top: -40px;
     padding: 10px;
 }
 
@@ -431,7 +430,6 @@ nav {
     color: #FFF;
     background-color: #22ac00;
     border-radius: 7px;
-    margin-top: -40px;
     padding: 10px;
 }
 
@@ -462,7 +460,6 @@ nav {
     color: #FFF;
     background-color: #ff921d;
     border-radius: 7px;
-    margin-top: -40px;
     padding: 10px;
 }
 
@@ -493,7 +490,6 @@ nav {
     color: #FFF;
     background-color: #b938ff;
     border-radius: 7px;
-    margin-top: -40px;
     padding: 10px;
 }
 
@@ -521,6 +517,7 @@ nav {
     border: 1px solid #888;
     margin: 20px auto;
     padding: 0;
+    border-spacing: 0;
 }
 
 .content-inner-table th,
@@ -586,7 +583,7 @@ nav {
 
 .footer p {
     font-size: 0.7rem;
-    text-align: center;
+    text-align: left;
     padding: 15px 0;
 }
 
