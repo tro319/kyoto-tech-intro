@@ -8,7 +8,8 @@
     margin: 0;
 }
 
-body {
+body, html {
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -68,14 +69,18 @@ p {
 
 .header {
     width: 100%;
-    padding: 20px 15px;
-    background-color: rgba(126, 180, 255, 0.9);
+    background-color: rgba(126, 180, 255);
     position: absolute;
     top: 0;
+}
+
+.header-cover {
     display: flex;
+    padding: 10px;
 }
 
 nav {
+    max-width: 100%;
     margin: 0 0 0 auto;
 }
 
@@ -97,7 +102,11 @@ nav {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+    }
+
     .pc {
         display: none;
     }
@@ -109,7 +118,6 @@ nav {
         margin: 0 0 0 auto;
         width: 60px;
         height: 30px;
-        padding-left: 20px;
     }
 
     .icon span {
@@ -149,11 +157,11 @@ nav {
     }
 
     .sm {
-        top: 60px;
+        top: 50px;
         left: 0;
         position: absolute;
         width: 100%;
-        background-color: rgba(126, 180, 255, 0.9);
+        background-color: rgba(126, 180, 255);
     }
 
     .sm ul {
@@ -211,6 +219,8 @@ nav {
 ============================== */
 
 .container {
+    width: 100%;
+    max-width: 100%;
     animation-name: main-all-fadeIn;
     animation-duration: 0.9s;
 }
@@ -525,8 +535,11 @@ nav {
 .footer {
     width: 100%;
     color: #FFF;
-    padding: 15px;
     background-color: #555;
+}
+
+.footer-cover {
+    padding: 10px;
 }
 
 .footer-inner {
