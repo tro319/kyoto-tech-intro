@@ -17,10 +17,10 @@ jQuery(window).on("resize", function() {
 
 
 
-// スクロール表示、右から
+// スクロール表示、上から
 
-function scrollBurnRight() {
-    jQuery(".fadeInMove-r").each(function() {
+function scrollBurnDown() {
+    jQuery(".fadeInMove-d").each(function() {
         var scrollTop = jQuery(window).scrollTop();
         var windowHeight = jQuery(window).height();
         var targetPosY = jQuery(this).offset().top;
@@ -34,10 +34,10 @@ function scrollBurnRight() {
     });
 }
 
-// スクロール表示、左から
+// スクロール表示、下から
 
-function scrollBurnLeft() {
-    jQuery(".fadeInMove-l").each(function() {
+function scrollBurnUp() {
+    jQuery(".fadeInMove-u").each(function() {
         var scrollTop = jQuery(window).scrollTop();
         var windowHeight = jQuery(window).height();
         var targetPosY = jQuery(this).offset().top;
@@ -52,8 +52,8 @@ function scrollBurnLeft() {
 }
 
 jQuery(window).scroll(function() {
-    scrollBurnRight();
-    scrollBurnLeft();
+    scrollBurnDown();
+    scrollBurnUp();
 });
 
 
