@@ -10,7 +10,6 @@
 
 body, html {
     width: 100%;
-    overflow-x: hidden;
 }
 
 .site-title {
@@ -243,32 +242,28 @@ nav {
 /* スクロールすれば表示設定
 ============================= */
 
-.fadeInMove-r {
+.fadeInMove-d {
     position: relative;
-    right: -20px;
     top: -15px;
     opacity: 0;
     transition: all 0.9s;
 }
 
-.fadeInMove-r.active {
+.fadeInMove-d.active {
     position: relative;
-    right: 0;
     top: 0;
     opacity: 1;
 }
 
-.fadeInMove-l {
+.fadeInMove-u {
     position: relative;
-    left: -20px;
     bottom: -15px;
     opacity: 0;
     transition: all 0.9s;
 }
 
-.fadeInMove-l.active {
+.fadeInMove-u.active {
     position: relative;
-    left: 0;
     bottom: 0;
     opacity: 1;
 }
