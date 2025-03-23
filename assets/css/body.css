@@ -85,7 +85,7 @@ nav {
 
 .pc ul {
     display: flex;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     margin: 0;
 }
 
@@ -94,6 +94,13 @@ nav {
     color: #555;
     display: block;
     padding: 0 20px;
+}
+
+.pc ul li:last-child a {
+    font-size: 1.1rem;
+    color: #555;
+    display: block;
+    padding-right: 0;
 }
 
 .sm {
