@@ -74,3 +74,16 @@ jQuery(function () {
         jQuery("html, body").animate({ scrollTop: 0 }, 300);
     });
 });
+
+// ロゴオープンアニメーション
+
+jQuery(document).ready(function() {
+    jQuery("#logoFloating").animate({ width: "0%"}, 1500, function() {
+        setTimeout(function() {
+            jQuery("#floating").fadeOut(1000, function() {
+                jQuery(".container").fadeIn(1000);
+            });
+        }, 500);
+    });
+});
+
