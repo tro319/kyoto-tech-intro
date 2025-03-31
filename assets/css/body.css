@@ -63,6 +63,15 @@ p {
 }
 
 
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+
 /* header設定
 ============================= */
 
@@ -224,12 +233,6 @@ nav {
 /* メインコンテンツ設定
 ============================== */
 
-.container {
-    width: 100%;
-    max-width: 100%;
-    animation-name: main-all-fadeIn;
-    animation-duration: 0.9s;
-}
 
 .main-contents {
     max-width: 960px;
@@ -597,5 +600,44 @@ nav {
     }
     
     
+}
+
+
+/* ふわっとロゴ表示
+============================= */
+
+.floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.f-logo-inner {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.f-logo {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: relative;
+}
+
+.logo-floating {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
 }
 
