@@ -624,6 +624,15 @@
                         </section>
 
 
+                        <!-- 誘導ボタン -->
+
+                        <div class="link-sc-hp">
+
+                            <a href="https://kyoto-tech.ac.jp/?gad_source=1&gclid=CjwKCAjwvr--BhB5EiwAd5YbXsXKsO40qBOCki28_bBaiPVk1S2b2mC0aSroIde6bBnsWTwwj_yc8hoCUVkQAvD_BwE">京都テック公式HPへ</a>
+
+                        </div>
+
+
 
         </div>
 
@@ -664,6 +673,22 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="assets/js/ani.js"></script>
+<script>
+
+
+jQuery(document).ready(function() {
+    jQuery("#f-logo").animate({opacity: 1 }, 1500, function() {
+        jQuery("#f-logo::after").animate({width: "0%"}, 1500, function() {
+            setTimeout(function() {
+                jQuery("#floating").fadeOut(1000, function() {
+                    jQuery(".container").fadeIn(1000);
+                });
+            }, 1000);
+        });
+    });
+});
+
+</script>
     
 </body>
 </html>
