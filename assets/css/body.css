@@ -63,7 +63,6 @@ p {
 }
 
 
-
 .container {
     width: 100%;
     max-width: 100%;
@@ -232,6 +231,7 @@ nav {
 
 /* メインコンテンツ設定
 ============================== */
+
 
 
 .main-contents {
@@ -640,4 +640,32 @@ nav {
     height: 100%;
     background: rgba(255, 255, 255, 0.7);
 }
+
+
+
+/* 誘導ボタン スタイル設定
+================================== */
+
+
+.link-sc-hp {
+    text-align: center;
+}
+
+.link-sc-hp a {
+    font-size: 1.3rem;
+    color: #FFF;
+    background-color: #0095ff;
+    border-radius: 7px;
+    padding: 15px;
+    margin: 30px 0;
+    transition: all 0.5s;
+}
+
+.link-sc-hp a:hover,
+.link-sc-hp a:active {
+    color: #000;
+    background-color: #65bfff;
+}
+
+
 
